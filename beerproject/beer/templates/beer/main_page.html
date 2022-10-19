@@ -1,0 +1,15 @@
+{% extends "beer/base.html" %}
+{% load static %}
+
+{% block head %}
+    <link href="{% static 'beer/css/main_page.css' %}" rel="stylesheet" type="text/css" />
+{% endblock %}
+
+{% block page %}
+<body>
+
+<button class ="buttons" onclick="document.location='{% url 'login' %}'">Войти</button>
+<button class ="buttons" onclick="document.location='{% url 'registration' %}'">Зарегистрироваться</button>
+
+</body>
+{% endblock %}

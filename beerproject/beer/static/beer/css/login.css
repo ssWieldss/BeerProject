@@ -1,0 +1,60 @@
+body {
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: url("../img/3.jpg");
+  background-size: cover;
+}
+
+.login_form {
+  position: relative;
+  background: #f2f2f2;
+  max-width: 300px;
+  margin: 15% auto;
+  padding: 3em;
+}
+
+.input-data-field {
+ font-family: 'Source Sans Pro', sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 30px;
+  padding: 25px;
+  box-sizing: border-box;
+  font-size: 15px;
+}
+
+.signin_button {
+  font-family: 'Source Sans Pro', sans-serif;
+  background: #00000;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #0a0000;
+  font-size: 13px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-transform: capitalize;
+}
+
+input:invalid {
+  background: linear-gradient(90deg, #faf0cd, #fab397);
+  border-radius: 5px;
+}
+
+input:required:valid {
+  background: linear-gradient(90deg, #faf0cd, #fab397);
+  border-color: #0043CC;
+}
+.signin_button:hover,.form button:active,.form button:focus {
+  background: #43A047;
+}
+
+
+
+
+
+

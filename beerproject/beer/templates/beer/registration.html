@@ -1,0 +1,22 @@
+{% extends "beer/base.html" %}
+{% load static %}
+
+{% block head %}
+    <link href="{% static 'beer/css/reg_form.css' %}" rel="stylesheet" type="text/css" />
+{% endblock %}
+
+{% block page %}
+<body>
+        <form method="post" name="reg_form" class="reg_form">
+            {% csrf_token %}
+                <h1>Регистрация</h1>
+                <div>
+                    {% for field in form %}
+                        {{ field }}
+                        {{ field.errors }}
+                    {% endfor %}
+                 </div>
+            <input class="reg_button" type="submit" value="Зарегистрироваться">
+        </form>
+</body>
+{% endblock %}

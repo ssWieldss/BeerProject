@@ -1,0 +1,75 @@
+{% extends "beer/base.html" %}
+{% load static %}
+
+{% block head %}
+<link href="{% static 'beer/css/beer.css' %}" rel="stylesheet" type="text/css"/>
+{% endblock %}
+
+{% block page %}
+<body>
+
+    <div class = "header_block">
+        <h1>Beer Enjoyers</h1>
+        <div class = "username"> {{user.username}}
+            <a href="{% url 'logout' %}"> Logout </a>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="title_for_beer"> {{beer.name}}</div>
+            <div class = "container_first">
+                <div class="description_text"> {{ beer.description }}</div>
+                <img src="{{ beer.img_path.url }}" width="600" height="600">
+            </div>
+        <div class = "video_youtube">
+        <iframe width="560" height="315" src="{{ beer.video }}"
+                title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+                            encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+    </div>
+
+   <div class = "outro_container">
+
+    <div class="likes">
+
+            {% if like_flag %}
+        <label class="icons"><input type="checkbox" checked id="myCheckBox">
+                <a id="like_back" class="like_active" name="{{ post.id }}">
+                    <span>
+                            <img id="like_icon" src="{% static 'beer/img/liked.png' %}" alt="Иконка">
+                    </span>
+                </a>
+            </label>
+            {% else %}
+            <label class="icons"><input type="checkbox" checked id="myCheckBox">
+                <a id="like_back" class="like_unactive" name="{{ post.id }}">
+                    <span>
+                        <img id="like_icon" src="{% static 'beer/img/unliked.png' %}" alt="Иконка">
+                    </span>
+                </a>
+                </label>
+
+            {% endif %}
+        <span id="likes_count" class="likes_num">{{ beer.total_likes }}</span>
+    </div>
+
+    <div class="button-nav">
+        {% if previous is not None %}
+        <button class="previous" onclick="document.location='{% url 'beer_page' previous.pk %}'">Previous</button>
+        {% endif %}
+        {% if next is not None %}
+        <button class="next" onclick="document.location='{% url 'beer_page' next.pk %}'">Next</button>
+        {% endif %}
+    </div>
+
+    <div>
+        <button class="home" onclick="document.location='{% url 'main_menu'%}'">Home</button>
+    </div>
+   </div>
+</body>
+<script src="{% static 'beer/js/like_script.js' %}"></script>
+{% endblock %}
+
+
+

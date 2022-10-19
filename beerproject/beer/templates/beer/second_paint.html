@@ -1,0 +1,59 @@
+{% extends "beer/base.html" %}
+{% load static %}
+
+{% block head %}
+    <link href="{% static 'paints/css/collection.css' %}" rel="stylesheet" type="text/css" />
+{% endblock %}
+
+{% block page %}
+<body>
+    <h1>IVA NAILS</h1>
+    <div>
+        
+  <p>IVA nails — это молодой и быстро развивающийся бренд, который сразу с момента выхода завоевал
+      доверие нейл-мастеров. Гель-лаки идеально ложатся в 1-2 тонких слоя, не затекая в боковые валики
+      и под кутикулу. Работать настоящее удовольствие как для профессионального мастера, так и для новичка
+      в нейл-индустрии. Каучуковая формула базовых и топовых покрытий гарантирует стойкость маникюра без сколов.</p>
+
+<p>Коллекции гель-лаков IVA nails — это палитра самых популярных и модных оттенков на любой вкус.
+    Так же у нас представлены сопутствующие жидкости, уходовые средства и материалы для дизайна ногтей.</p>
+    </div>
+  
+    
+            
+        <center>
+            <p></p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/eynjQxxUEyc"
+                    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay;
+                    clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </p>
+        </center>
+  <div>
+           Ознакомьтесь с маркой, чтобы по-настоящему влюбиться и работать на качественных материалах!
+            
+    </div>
+    <div class="button-nav">
+        <button class="previous" onclick="document.location='{% url 'first_paint' %}'">Previous</button>
+        <button class="next" onclick="document.location='{% url 'authors' %}'">Next</button>
+    </div>
+    <div>
+        <ol>
+            <strong>Навигация</strong>
+            <li>GRATTOL</li>
+            <ul>
+                <li>Информация о бренде</li>
+            </ul>
+            <li>IVA NAILS</li>
+            <ul>
+                <li>Информация о бренде</li>
+             
+            </ul>
+            <li>Авторы</li>
+            <li>Чат бот-Telegram</li>
+        </ol>
+        <div>
+            <a href="{% url 'main_menu' %}">Back to menu</a>
+        </div>
+        <script src="script.js"></script>
+</body>
+{% endblock %}

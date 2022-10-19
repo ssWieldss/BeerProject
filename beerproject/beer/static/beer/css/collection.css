@@ -1,0 +1,132 @@
+body {
+	height: auto;
+	font-family: 'Fredoka', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
+    background: url("../img/fon2.jpg");
+    background-size: cover;
+}
+* {box-sizing: border-box;}
+.open-button {
+  background-color: #2196F3;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 20px 25px;
+  border: none;
+  cursor: pointer;
+  opacity: 1;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+}
+
+.form-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+  
+}
+
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+  
+}
+
+.form-container input[type=text], .form-container input[type=text] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+.form-container input[type=text]:focus, .form-container input[type=text]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+.form-container .btn {
+  background-color: #1976D2;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.form-container .cancel {
+  background-color: #448AFF;
+}
+
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+.Navigation{
+  text-align: center;
+  align: center;
+  margin: 30px, 30px, 10px, 10px;
+}
+.Link{
+  border: 1px;
+  border: 2px solid #db1a54;
+  margin: 15px, 15px, 10px, 10px;
+  padding:10px;
+}
+h1{
+  text-align: center;
+}
+.scale{
+  transition: 0.5s; /* Время эффекта */
+  }
+  .scale:hover {
+    transform: scale(1.1); /* Увеличиваем масштаб */
+  }
+.logout-nav button{
+  cursor:  pointer;
+  background-color: #FFD700;
+  border: 0;
+  outline: 0;
+  width:75px;
+  height:30px;
+  margin:50px;
+  border-radius: 8px;
+  font-size: 15px;
+  position:relative;
+  top: -25rem;
+  left: 110rem; 
+  overflow: hidden;
+  font-family: 'Fredoka', sans-serif;
+}
+.button-nav button{
+  cursor:  pointer;
+  background-color: #FFD700;
+  border: 0;
+  outline: 0;
+  width:75px;
+  height:30px;
+  margin:50px;
+  border-radius: 8px;
+  font-size: 15px;
+  position:relative;
+  overflow: hidden;
+  font-family: 'Fredoka', sans-serif;
+}
+.next{
+  float: right;
+}
+.button-nav{
+  display:inline-block;
+  width: 100%;
+}
+
+

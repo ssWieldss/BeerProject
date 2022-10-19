@@ -1,0 +1,40 @@
+{% extends "beer/base.html" %}
+{% load static %}
+
+{% block head %}
+    <link href="{% static 'paints/css/authors.css' %}" rel="stylesheet" type="text/css" />
+{% endblock %}
+
+{% block page %}
+
+    </head>
+    <body>
+      <center>
+      <h1>Авторы лабораторных работ</h1>
+        </center>
+      <hr>
+      <center><h2>Зайцев Данила ПИН-24</h2> и <h2>Бартенев Максим ПИН-24</h2></center>
+      <button class="open-button" onclick="openForm()">Напиши нам</button>
+      <div class="form-popup" id="myForm">
+      <form action="https://api.telegram.org/bot5380367041:AAH5ekHVAKVwyL-qo8M5D4U8kOtzhGWM8Sw/sendMessage?chat_id=value&text=value" method="get" target="dummyframe"id="myForm">
+        <label for="name"><b>Сhat ID</b></label>
+  <input type="text" placeholder="Chat id" name="chat_id">
+      <label for="message"><b>Сообщение</b></label>
+    <input type="text" placeholder="Введите сообщение" name="text">
+ <input type="submit" value="Отправить">
+    <button type="button" class="btn cancel" onclick="closeForm()">Закрыть</button>
+  </form>
+        </div>
+
+     <div class="button-nav">
+      <button class ="previous" onclick="document.location='{% url 'second_beer' %}'">Предыдущие</button>
+        </div>
+      <div class="logout-nav">
+      <button class ="logout" onclick="document.location='{% url 'logout' %}'">Выйти</button>
+      </div>
+      <div><a href="{% url 'main_menu' %}">Меню</a></div>
+      <script src="script.js"></script>
+
+ </body>
+{% endblock %}
+

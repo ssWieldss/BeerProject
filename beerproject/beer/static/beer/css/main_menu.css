@@ -1,0 +1,13 @@
+
+body {
+background: url("../img/3.jpg");
+background-size: cover;
+margin-top:5%;
+}
+.image_for_beer{
+  transition: 1s; /* Время эффекта */
+}
+
+.image_for_beer:hover {
+   transform: scale(1.1); /* Увеличиваем масштаб */
+}

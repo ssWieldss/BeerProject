@@ -1,0 +1,21 @@
+{% extends "beer/base.html" %}
+{% load static %}
+
+{% block head %}
+    <link href="{% static 'beer/css/main_menu.css' %}" rel="stylesheet" type="text/css" />
+{% endblock %}
+
+{% block page %}
+  <body>
+  {% for beer in beer %}
+    <div class="image_for_beer" style="float:left">
+    <a href="{% url 'beer_page' beer.pk  %}">
+            <img src="{{ beer.img_path.url }}"width="700" height="700">
+          </a>
+    </div>
+  {% endfor %}
+
+    <script src="script.js"></script>
+  </body>
+
+{% endblock %}
